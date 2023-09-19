@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import os
 
 #cria a máscara com as matizes verdes
 def create_mask(img):
@@ -185,3 +186,12 @@ def structuring_lbp(imagem_roi):
             img_lbp[i, j] = lbp_calculated_pixel(img_gray, i, j)
     
     return img_lbp
+
+# função que faz o caminho de onde o arquivo será despejado 
+def naming_outputs(contador):
+    pasta_output = 'image_segmentation/binarization_outputs'
+    nome_arquivo = f'binarized_{contador}.png'
+
+    output_caminho = os.path.join(pasta_output, nome_arquivo)
+
+    return output_caminho
