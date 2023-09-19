@@ -195,3 +195,21 @@ def naming_outputs(contador):
     output_caminho = os.path.join(pasta_output, nome_arquivo)
 
     return output_caminho
+
+# função que esvazia a pasta binarization_outputs
+def delete_outputs(folder_path):
+    # checa se existe a pasta
+    if os.path.exists(folder_path):
+        # Lista todos os arquivos na pasta
+        arquivos = os.listdir(folder_path)
+        
+        # exclui cada arquivo dentro da pasta
+        for file in arquivos:
+            caminho_arquivo = os.path.join(folder_path, file)
+            try: # try_catch para gerar exceção 
+                if os.path.isfile(caminho_arquivo):
+                    os.remove(caminho_arquivo)  # Exclua apenas arquivos, não pastas
+            except Exception as e: #caso exista uma pasta dentro, o que não é pra ter
+                print(f'Erro ao excluir {caminho_arquivo}: {str(e)}')
+    else:
+        print(f'A pasta {folder_path} não existe.')

@@ -4,6 +4,8 @@ from functions import *
 
 if __name__ == '__main__':
     # img = cv2.imread('dataset/0a2de4c5-d688-4f9d-9107-ace1d281c307___Com.G_TgS_FL 7941_180deg.JPG')
+    
+    delete_outputs('image_segmentation/binarization_outputs') #esvazia a pasta output
 
     pasta_imgs = 'image_segmentation/dataset/'
     arquivos = os.listdir(pasta_imgs)  
@@ -52,4 +54,4 @@ if __name__ == '__main__':
             else:
                 print(f'Erro ao carregar imagem {arq}')
         
-        contador *= 1
+        contador += 1
