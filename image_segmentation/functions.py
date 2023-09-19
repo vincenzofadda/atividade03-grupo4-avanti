@@ -189,7 +189,7 @@ def structuring_lbp(imagem_roi):
 
 # função que faz o caminho de onde o arquivo será despejado 
 def naming_outputs(contador):
-    pasta_output = 'image_segmentation/binarization_outputs'
+    pasta_output = 'image_segmentation/binarization_outputs' # modifique aqui para colocar caminho próprio
     nome_arquivo = f'binarized_{contador}.png'
 
     output_caminho = os.path.join(pasta_output, nome_arquivo)
