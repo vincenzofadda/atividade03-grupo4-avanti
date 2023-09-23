@@ -6,5 +6,5 @@ Classificação entre modelos de folhas de uva e morango
 
 **A branch `classificacao` foi feita em uma tentativa de classificar espécias distintas de folhas.
 
-O banco de dados usado para a classificação pode ser acessado em:
+O banco de imagens usado para a classificação pode ser acessado em:
 https://drive.google.com/file/d/15QrvEncsw0D56HKJ--dBIWPGYwx7q-Kv/view?usp=sharing 
