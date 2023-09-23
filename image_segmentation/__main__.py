@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
                 #aplicar borramento gaussiano para reduzir ruídos
                 borrado_mask = cv2.GaussianBlur(img_contrast_check, (3, 3), 0) #mais pixels = menos ruído e mais imperfeições!
-
+                
                 hsv = cv2.cvtColor(borrado_mask, cv2.COLOR_BGR2HSV)
                 
                 mask = create_mask(hsv)
